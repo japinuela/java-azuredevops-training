@@ -1,0 +1,21 @@
+trigger:
+- main
+
+pool:
+  name: Default
+
+steps:
+- script: echo "Iniciando pipeline"
+  displayName: 'Inicio'
+
+- script: mvnw.cmd clean test
+  displayName: 'Build y tests'
+
+- script: mvnw.cmd package
+  displayName: 'Generar artefacto'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'target'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
