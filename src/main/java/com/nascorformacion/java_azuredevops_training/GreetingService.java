@@ -8,6 +8,6 @@ public class GreetingService {
         if (name == null || name.isBlank()) {
             return "Hola, mundo";
         }
-        return "Hola, " + name;
+        return "Buenos días, " + name + "!";
     }
 }
