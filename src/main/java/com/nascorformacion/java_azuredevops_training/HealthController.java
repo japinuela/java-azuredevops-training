@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 public class HealthController {
-    //TODO Ejemplo de comentario
     private final GreetingService greetingService;
 
     public HealthController(GreetingService greetingService) {
